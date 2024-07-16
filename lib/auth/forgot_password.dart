@@ -36,7 +36,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             children: [
               Text("Forgot Password?", style: headingTextStyle,),
               const SizedBox(height: 20,),
-              const Text("Enter email associated with your account and we'll send and email with intructions to reset your password", softWrap: true,style: choiceTextStyle,),
+              const Text("Enter email associated with your account and we'll send and email with instructions to reset your password", softWrap: true,style: choiceTextStyle,),
               const SizedBox(height: 50,),
               CustomTextField(controller: emailController, hintText: "enter your email here", prefixIcon: const Icon(Icons.email_outlined),),
               const SizedBox(height: 50,),

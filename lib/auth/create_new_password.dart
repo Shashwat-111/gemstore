@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fluxstore/auth/log_in.dart';
+import 'package:fluxstore/main.dart';
 import 'package:fluxstore/utils/styles.dart';
 import 'package:fluxstore/widgets/custom_text_field.dart';
 import 'package:fluxstore/widgets/defaultButton.dart';
@@ -49,27 +51,35 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                   alignment: Alignment.center,
                   child: DefaultButton(onPressed: (){
                     SystemChannels.textInput.invokeMethod('TextInput.hide');
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        padding: EdgeInsets.zero,
-                          content: Container(
-                            decoration: const BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))
-                            ),
-                            child: Column(
-                              children: [
-                                const SizedBox(height: 20),
-                                const Text("Your Password has been Changed", softWrap: true,style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black),),
-                                const SizedBox(height: 20),
-                                const Text("welcome back! Discover Now", style: choiceTextStyle,),
-                                const SizedBox(height: 20),
-                                DefaultButton(onPressed: (){}, text: "Browse Home")
-                              ]
-                            ),
-                          )
-                      )
-                    );
+                    showModalBottomSheet(context: context, builder: (context){
+                      return Container(
+                        width: double.infinity,
+                        height: 300,
+                        decoration: const BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))
+                        ),
+                        child: Column(
+                            children: [
+                              const SizedBox(height: 20),
+                              CircleAvatar(
+                                radius: 50,
+                                backgroundColor: Colors.grey[200],
+                                child: Center(child: Image.asset("assets/passwordChangeSuccessful.png")),
+                              ),
+                              const SizedBox(height: 20),
+                              const Text("Your Password has been Changed!", softWrap: true,style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black),),
+                              const SizedBox(height: 20),
+                              SizedBox(
+                                width: 200,
+                                  height: 40,
+                                  child: DefaultButton(onPressed: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const LogIn()));
+                                  }, text: "Browse Home"))
+                            ]
+                        ),
+                      );
+                    });
                   }, text: "Enter"),
                 )
               ],
