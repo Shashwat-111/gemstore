@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:fluxstore/auth/log_in.dart';
-import 'package:fluxstore/main.dart';
+import 'package:fluxstore/screens/home_screen.dart';
 import 'package:fluxstore/utils/styles.dart';
 import 'package:fluxstore/widgets/custom_text_field.dart';
 import 'package:fluxstore/widgets/defaultButton.dart';
@@ -51,7 +50,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                   alignment: Alignment.center,
                   child: DefaultButton(onPressed: (){
                     SystemChannels.textInput.invokeMethod('TextInput.hide');
-                    showModalBottomSheet(context: context, builder: (context){
+                    showModalBottomSheet(context: context, builder: (context2){
                       return Container(
                         width: double.infinity,
                         height: 300,
@@ -74,7 +73,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                                 width: 200,
                                   height: 40,
                                   child: DefaultButton(onPressed: (){
-                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const LogIn()));
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
                                   }, text: "Browse Home"))
                             ]
                         ),
