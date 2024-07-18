@@ -22,12 +22,12 @@ class _MyAppDrawerState extends State<MyAppDrawer> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 290,
                 height: 150,
                 child:Center(
                   child: ListTile(
-                    leading: CircleAvatar(radius: 24,backgroundColor: Colors.grey[350],),
+                    leading: CircleAvatar(radius: 24,backgroundColor: Colors.transparent,backgroundImage: AssetImage("assets/defaultDP.png")),
                     title: const Text("Shashwat Dubey",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
                     subtitle: const Text("shashwatdubey111@gmail.com",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400),),
                   ),

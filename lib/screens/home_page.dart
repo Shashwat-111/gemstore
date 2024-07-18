@@ -110,7 +110,7 @@ class _HomePageState extends State<HomePage> {
                   itemBuilder: (context, index){
                 return Container(
                   decoration: BoxDecoration(
-                    color: Colors.grey[200],
+                    color: Colors.grey[100],
                     borderRadius: const BorderRadius.all(Radius.circular(10))
                   ),
                   width: 240,
