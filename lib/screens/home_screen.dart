@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluxstore/screens/notification_page.dart';
 import 'package:fluxstore/screens/profile_page.dart';
 import 'package:fluxstore/screens/my_orders_page.dart';
 import 'package:fluxstore/screens/home_page.dart';
@@ -29,12 +30,18 @@ class _HomeScreenState extends State<HomeScreen> {
     ProfilePage(),
   ];
 
+  List<String> appBarTitle = const [
+    "Gemstore",
+    "Discover",
+    "My Orders",
+    "Profile"
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Gemstore", style: TextStyle(fontWeight: FontWeight.bold),),
+        title: Text(appBarTitle[_selectedIndex], style: _selectedIndex == 0 ? const TextStyle(fontWeight: FontWeight.bold) : const TextStyle(fontWeight: FontWeight.w400)),
         leading: Builder(
           builder:(context)=> IconButton(
             icon: const Icon(Icons.menu_sharp),
@@ -44,7 +51,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         actions: [
-          IconButton(onPressed: (){}, icon: const Icon(Icons.notifications_none_sharp)),
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationPage()));
+          }, icon: const Icon(Icons.notifications_none_sharp)),
         ],
       ),
 

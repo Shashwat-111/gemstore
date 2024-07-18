@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+import 'package:fluxstore/utils/models/notification_model.dart';
+class NotificationPage extends StatelessWidget {
+  const NotificationPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    List<NotificationModel> notification = [
+      NotificationModel(title: "Good morning! Get 20% Voucher", message: "Summer sale up to 20% off. Limited voucher. \mGet now!!"),
+      NotificationModel(title: "Special offer just for you", message: "New Autumn Collection 30% off"),
+      NotificationModel(title: "Holiday sale 50%", message: "Tap here to get 50% voucher.")
+    ];
+
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+            icon : Icon(Icons.arrow_back_ios_sharp),
+          onPressed: () {
+              Navigator.pop(context);
+          },),
+        title: Text("Notification", style: TextStyle(fontWeight: FontWeight.w500),),
+      ),
+      body: SizedBox(
+        height: MediaQuery.of(context).size.height,
+        child: ListView.builder(
+          itemCount: notification.length,
+            itemBuilder: (context, index){
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: Container(
+              padding: EdgeInsets.all(16),
+              width: MediaQuery.of(context).size.width-32,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+                color: Colors.grey[200]
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(notification[index].title, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),),
+                  SizedBox(height: 10,),
+                  Text(notification[index].message, style: TextStyle(fontWeight: FontWeight.w200),softWrap: true,)
+                ],
+              ),
+            ),
+          );
+        }),
+      ),
+    );
+  }
+}
