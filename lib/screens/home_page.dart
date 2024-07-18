@@ -11,6 +11,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
+  //in future will get these lists form backend
   List<FeatureProductModel> featureProduct = [
     FeatureProductModel(image: "assets/turtleneckSweaterModel_Image.png",price: 39.99,name: "Turtleneck Sweater"),
     FeatureProductModel(image: "assets/longSleeveDressModel_Image.png",price: 45.00,name: "Long Sleeve Dress"),
@@ -40,6 +41,8 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: defaultHeightPadding),
+
+            //men,woman,accessory,child selection row
             SizedBox(
               height: 60,
               child: Row(
@@ -53,6 +56,8 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             const SizedBox(height: defaultHeightPadding),
+
+            //Main banner Image
             Stack(
                 children: [
                   Image.asset("assets/autumnCollection2022_Image.png"),
@@ -67,6 +72,8 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: defaultHeightPadding),
             const Text("Feature Products", style: subheadingTextStyle,),
             const SizedBox(height: defaultHeightPadding),
+
+            //vertical scrollable featured product section
             SizedBox(
               height: 235,
               width: double.infinity,
@@ -140,6 +147,7 @@ class _HomePageState extends State<HomePage> {
               height: 210,
               width: double.infinity,
               color: const Color(0xFFF8F8FA),
+              //should be removed when the image itself will contain the required text
               child: Stack(
                 children: [
                   const Positioned(
@@ -176,19 +184,21 @@ class _HomePageState extends State<HomePage> {
 
   GestureDetector buildGestureDetector(int currentIndex) {
     return GestureDetector(
-                onTap: (){
-                  setState(() {
-                    selectedIndex = currentIndex;
-                  });
-                },
-                child: CircleAvatar(
-                  radius: currentIndex == selectedIndex ? 28 : 24,
-                  backgroundColor: currentIndex == selectedIndex ? Colors.brown : Colors.grey[200],
-                  child: Icon(icons[currentIndex], color: currentIndex == selectedIndex ? Colors.white : Colors.black,),
-                ),
-              );
+      onTap: () {
+        setState(() {
+          selectedIndex = currentIndex;
+        });
+      },
+      child: CircleAvatar(
+        radius: currentIndex == selectedIndex ? 28 : 24,
+        backgroundColor: currentIndex == selectedIndex ? Colors.brown : Colors.grey[200],
+        child: Icon(
+          icons[currentIndex],
+          color: currentIndex == selectedIndex ? Colors.white : Colors.black,
+        ),
+      ),
+    );
   }
-
   Widget buildSelectableCircle({required IconData icon, int currentIndex =1}) {
     return CircleAvatar(
       radius: currentIndex == 1 ? 24 : 34,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluxstore/auth/log_in.dart';
 import 'package:fluxstore/auth/sign_up.dart';
-import 'package:fluxstore/screens/home_screen.dart';
+import 'package:fluxstore/screens/main_scaffold.dart';
 
 void main() {
   runApp(const MyApp());
