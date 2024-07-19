@@ -1,16 +1,26 @@
-# fluxstore
+# Ecommerce App Flutter
 
-A new Flutter project.
+![Flutter Version](https://img.shields.io/badge/flutter-v3.22.2-blue.svg)
+![Dart Version](https://img.shields.io/badge/dart-v3.4.3-blue.svg)
 
-## Getting Started
+This project is a UI for a Ecommerce app "Gemstore" built using Flutter. The design has been inspired by this [figma design](https://www.figma.com/design/MjhMQKNVjLj0Y43qjoJbhR/FluxStore-(Community)?node-id=0-1)
 
-This project is a starting point for a Flutter application.
+## Screenshots
+### Onboarding Pages
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fc8e300f-c8ba-4730-8898-0fe16c7582c7" alt="Create Account Page" width="300" style="margin-right: 20px;"/>
+  <img src="https://github.com/user-attachments/assets/45a8e26e-07b2-42d9-9e6d-ad88c4014d19" alt="Code Verification Page" width="300" style="margin-left: 20px;"/>
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+### Main Pages
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/76a1097c-077e-4c41-b2dd-c1354770d8a7" alt="Home Page" width="300" style="margin-right: 20px;"/>
+  <img src="https://github.com/user-attachments/assets/edd904d6-1765-4bee-beae-aa743fc72d7f" alt="Discover Page" width="300" style="margin-left: 20px;"/>
+  <img src="https://github.com/user-attachments/assets/f6f8a174-61a1-49e3-b688-a36cecb67a9c" alt="Profile Page" width="300" style="margin-left: 20px;"/>
+</p>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Additional Screens
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a348b71d-a0cf-4dc0-bfd1-147eb7a790c9" alt="App Drawer" width="300" style="margin-right: 20px;"/>
+  <img src="https://github.com/user-attachments/assets/db610a95-7c90-41f2-82e5-1e6ecc19de3c" alt="Notification Screen" width="300" style="margin-left: 20px;"/>
+</p>
