@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluxstore/utils/constants.dart';
 import 'package:fluxstore/widgets/list_tile_drawer.dart';
@@ -28,8 +27,8 @@ class _MyAppDrawerState extends State<MyAppDrawer> {
                 child:Center(
                   child: ListTile(
                     leading: CircleAvatar(radius: 24,backgroundColor: Colors.transparent,backgroundImage: AssetImage("assets/defaultDP.png")),
-                    title: const Text("Shashwat Dubey",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-                    subtitle: const Text("shashwatdubey111@gmail.com",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400),),
+                    title: Text("Shashwat Dubey",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                    subtitle: Text("shashwatdubey111@gmail.com",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400),),
                   ),
                 ),
               ),

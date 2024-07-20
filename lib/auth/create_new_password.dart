@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:fluxstore/screens/main_scaffold.dart';
 import 'package:fluxstore/utils/styles.dart';
 import 'package:fluxstore/widgets/custom_text_field.dart';
-import 'package:fluxstore/widgets/defaultButton.dart';
+import 'package:fluxstore/widgets/default_button.dart';
 
 import '../utils/constants.dart';
 

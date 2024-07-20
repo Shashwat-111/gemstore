@@ -5,6 +5,7 @@ import 'package:fluxstore/screens/my_orders_page.dart';
 import 'package:fluxstore/screens/home_page.dart';
 import 'package:fluxstore/screens/discover_page.dart';
 import 'package:fluxstore/widgets/app_drawer.dart';
+import 'package:fluxstore/widgets/filter_drawer.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -52,12 +53,13 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           IconButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationPage()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> const NotificationPage()));
           }, icon: const Icon(Icons.notifications_none_sharp)),
         ],
       ),
 
       drawer: const MyAppDrawer(),
+      endDrawer: const FilterDrawer(),
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(topLeft: Radius.circular(16), topRight: Radius.circular(16)),

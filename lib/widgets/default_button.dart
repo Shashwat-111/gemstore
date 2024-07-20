@@ -13,7 +13,7 @@ class DefaultButton extends StatelessWidget {
     return ElevatedButton(
         onPressed: onPressed,
         style: ButtonStyle(
-          padding: WidgetStateProperty.all(EdgeInsets.symmetric(horizontal: 40)),
+          padding: WidgetStateProperty.all(const EdgeInsets.symmetric(horizontal: 40)),
           backgroundColor: defaultButtonColor,
         ),
         child: Text(text, style: buttonTextStyle,),

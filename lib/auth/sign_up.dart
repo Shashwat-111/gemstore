@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluxstore/auth/log_in.dart';
 import 'package:fluxstore/utils/styles.dart';
-import 'package:fluxstore/widgets/defaultButton.dart';
+import 'package:fluxstore/widgets/default_button.dart';
 import 'package:fluxstore/widgets/social_icon_login_row.dart';
 
 import '../utils/constants.dart';

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluxstore/auth/create_new_password.dart';
 import 'package:fluxstore/utils/styles.dart';
-import 'package:fluxstore/widgets/custom_text_field.dart';
-import 'package:fluxstore/widgets/defaultButton.dart';
+import 'package:fluxstore/widgets/default_button.dart';
 
 import '../utils/constants.dart';
 import '../widgets/otp_input_field.dart';

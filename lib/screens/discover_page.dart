@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluxstore/utils/constants.dart';
 
@@ -10,20 +9,8 @@ class DiscoverPage extends StatefulWidget {
 }
 
 class _DiscoverPageState extends State<DiscoverPage> {
-
-  Widget _buildExpandableTiles(){
-    return const SizedBox(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ExpansionTile(title: Text("Jacket"),),
-          ExpansionTile(title: Text("Skirt")),
-          ExpansionTile(title: Text("Dresses")),
-        ],
-      ),
-    );
-  }
   List<bool> isExpanded = [false,false,false,false];
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -65,7 +52,12 @@ class _DiscoverPageState extends State<DiscoverPage> {
                       color: Colors.grey[300],
                       borderRadius: const BorderRadius.all(Radius.circular(15))
                     ),
-                    child: Icon(Icons.tune_sharp,color: Colors.grey[600],),
+                    child: IconButton(
+                      icon : Icon(Icons.tune_sharp,color: Colors.grey[600]),
+                      onPressed: (){
+                        Scaffold.of(context).openEndDrawer();
+                      },
+                    ),
                   )
 
                 ],
@@ -76,9 +68,9 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 dividerColor: Colors.transparent,
                 expandedHeaderPadding: const EdgeInsets.symmetric(vertical: 0),
                 elevation: 0,
-                expansionCallback: (int, isExpanded){
+                expansionCallback: (index, isExpanded){
                   setState(() {
-                    this.isExpanded[int] = isExpanded;
+                    this.isExpanded[index] = isExpanded;
                   });
                 },
                 children: [
@@ -127,6 +119,20 @@ class _DiscoverPageState extends State<DiscoverPage> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+
+  Widget _buildExpandableTiles(){
+    return const SizedBox(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ExpansionTile(title: Text("Jacket"),),
+          ExpansionTile(title: Text("Skirt")),
+          ExpansionTile(title: Text("Dresses")),
+        ],
       ),
     );
   }

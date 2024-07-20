@@ -44,7 +44,7 @@ class _ProfilePageState extends State<ProfilePage> {
               return ListTile(
                 leading: Icon(settingList.values.elementAt(index), color: Colors.grey,),
                 title: Text(settingList.keys.elementAt(index)),
-                trailing: index == 5 ? null : Icon(Icons.chevron_right),
+                trailing: index == 5 ? null : const Icon(Icons.chevron_right),
                 onTap: (){
                   //todo create a list of function
                 },

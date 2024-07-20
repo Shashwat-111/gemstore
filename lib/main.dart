@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluxstore/auth/log_in.dart';
-import 'package:fluxstore/auth/sign_up.dart';
 import 'package:fluxstore/screens/main_scaffold.dart';
 
 void main() {
@@ -10,19 +8,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'FluxStore',
-      theme: ThemeData(
-        splashColor: Colors.transparent,
-        colorScheme: ColorScheme.fromSeed(
-            seedColor: Colors.white,
-        ),
-        useMaterial3: true,
-      ),
-      home: const SignUp()
+
+        /// for now adding the screen currently being worked on
+        /// todo add navigation from go_router package
+      home: HomeScreen()
     );
   }
 }

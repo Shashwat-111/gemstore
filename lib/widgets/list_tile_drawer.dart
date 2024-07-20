@@ -10,7 +10,7 @@ class ListTileForDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(12)),
+        borderRadius: const BorderRadius.all(Radius.circular(12)),
         // todo make this functional based on the selected value;
         color: icon == Icons.home_outlined ? Colors.grey[300] : null,
       ),
