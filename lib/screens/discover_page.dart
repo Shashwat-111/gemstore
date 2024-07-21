@@ -22,7 +22,6 @@ class _DiscoverPageState extends State<DiscoverPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
                     child: ClipRRect(
@@ -31,16 +30,12 @@ class _DiscoverPageState extends State<DiscoverPage> {
                         textAlign: TextAlign.start,
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
-
                           border: InputBorder.none,
-                          //enabledBorder: null,
                           fillColor: Colors.grey[300],
                           filled: true,
                           hintText: "Search",
                           prefixIcon: const Icon(Icons.search_sharp),
-                          //border: OutlineInputBorder(borderRadius: BorderRadius.circular(23),)
                         ),
-
                       ),
                     ),
                   ),

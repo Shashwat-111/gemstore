@@ -51,6 +51,7 @@ class _LogInState extends State<LogIn> {
                 ),
                 const Text("or sign up with", style: choiceTextStyle,),
                 SocialIconLoginRow(
+                  //todo implement firebase login functionality
                   onPressedApple: (){},
                   onPressedFacebook:(){} ,
                   onPressedGoogle: (){},

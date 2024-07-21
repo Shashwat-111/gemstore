@@ -18,6 +18,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
+  //the state of the page is currently not preserved
+  //todo either replace BottomNavBar with IndexedStack widget or wrap it with PageView widget
   _navigateBottomBar(int index){
     setState(() {
       _selectedIndex = index;
@@ -37,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
     "My Orders",
     "Profile"
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

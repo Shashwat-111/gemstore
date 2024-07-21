@@ -190,6 +190,7 @@ class _HomePageState extends State<HomePage> {
         });
       },
       child: CircleAvatar(
+        //enlarge the selected icon & highlight it with a different color.
         radius: currentIndex == selectedIndex ? 28 : 24,
         backgroundColor: currentIndex == selectedIndex ? Colors.brown : Colors.grey[200],
         child: Icon(
@@ -197,13 +198,6 @@ class _HomePageState extends State<HomePage> {
           color: currentIndex == selectedIndex ? Colors.white : Colors.black,
         ),
       ),
-    );
-  }
-  Widget buildSelectableCircle({required IconData icon, int currentIndex =1}) {
-    return CircleAvatar(
-      radius: currentIndex == 1 ? 24 : 34,
-      backgroundColor: Colors.grey[200],
-      child: Icon(icon, color: Colors.black,),
     );
   }
 }
