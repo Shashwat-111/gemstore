@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluxstore/utils/constants.dart';
 import 'package:fluxstore/utils/models/feature_product_model.dart';
-import 'package:fluxstore/utils/styles.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                 ]
                 ),
             const SizedBox(height: defaultHeightPadding),
-            const Text("Feature Products", style: subheadingTextStyle,),
+            Text("Feature Products", style: Theme.of(context).textTheme.titleLarge,),
             const SizedBox(height: defaultHeightPadding),
 
             //vertical scrollable featured product section
@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: defaultHeightPadding),
             Image.asset("assets/hangoutAndPartyCollection_Image.png"),
             const SizedBox(height: defaultHeightPadding),
-            const Text("Recommended", style: subheadingTextStyle,),
+            Text("Recommended", style: Theme.of(context).textTheme.titleLarge,),
             const SizedBox(height: defaultHeightPadding),
             SizedBox(
               height: 66,
@@ -141,7 +141,7 @@ class _HomePageState extends State<HomePage> {
               }),
             ),
             const SizedBox(height: defaultHeightPadding),
-            const Text("Top Collection", style: subheadingTextStyle,),
+            Text("Top Collection", style: Theme.of(context).textTheme.titleLarge,),
             const SizedBox(height: defaultHeightPadding),
             Container(
               height: 210,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluxstore/auth/forgot_password.dart';
 import 'package:fluxstore/auth/sign_up.dart';
-import 'package:fluxstore/utils/styles.dart';
 import 'package:fluxstore/widgets/default_button.dart';
 import 'package:fluxstore/widgets/social_icon_login_row.dart';
 
@@ -34,7 +33,7 @@ class _LogInState extends State<LogIn> {
               children: [
                 Align(
                     alignment: Alignment.centerLeft,
-                    child: Text("Login into\nyour account", style: headingTextStyle,)),
+                    child: Text("Login into\nyour account", style: Theme.of(context).textTheme.headlineLarge,)),
                 CustomTextField(controller: emailController, hintText: "Email address"),
                 CustomTextField(controller: passwordController, hintText: "Password"),
                 Align(
@@ -43,13 +42,13 @@ class _LogInState extends State<LogIn> {
                       onTap: (){
                         Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const ForgotPassword()));
                       },
-                        child: const Text("Forgot password?", style: choiceTextStyle,))),
+                        child: Text("Forgot password?", style: Theme.of(context).textTheme.bodySmall,))),
                 const SizedBox(height: 60),
                 DefaultButton(
                   onPressed: (){},
-                  text: "Sign Up",
+                  text: "Login",
                 ),
-                const Text("or sign up with", style: choiceTextStyle,),
+                Text("or login with", style: Theme.of(context).textTheme.bodySmall,),
                 SocialIconLoginRow(
                   //todo implement firebase login functionality
                   onPressedApple: (){},

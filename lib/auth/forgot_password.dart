@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fluxstore/auth/verification_code.dart';
-import 'package:fluxstore/utils/styles.dart';
 import 'package:fluxstore/widgets/custom_text_field.dart';
 import 'package:fluxstore/widgets/default_button.dart';
 
@@ -34,9 +33,12 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Forgot Password?", style: headingTextStyle,),
+              Text("Forgot Password?",
+                style: Theme.of(context).textTheme.headlineLarge,),
               const SizedBox(height: 20,),
-              const Text("Enter email associated with your account and we'll send and email with instructions to reset your password", softWrap: true,style: choiceTextStyle,),
+              Text("Enter email associated with your account and "
+                  "we'll send and email with instructions to reset your password",
+                softWrap: true,style: Theme.of(context).textTheme.bodySmall,),
               const SizedBox(height: 50,),
               CustomTextField(controller: emailController, hintText: "enter your email here", prefixIcon: const Icon(Icons.email_outlined),),
               const SizedBox(height: 50,),

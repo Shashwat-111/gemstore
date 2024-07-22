@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fluxstore/auth/log_in.dart';
-import 'package:fluxstore/utils/styles.dart';
 import 'package:fluxstore/widgets/default_button.dart';
 import 'package:fluxstore/widgets/social_icon_login_row.dart';
 
@@ -34,7 +33,7 @@ class _SignUpState extends State<SignUp> {
               children: [
                 Align(
                   alignment: Alignment.centerLeft,
-                    child: Text("Create\nyour account", style: headingTextStyle,)),
+                    child: Text("Create\nyour account", style: Theme.of(context).textTheme.headlineLarge,)),
                 CustomTextField(controller: nameController, hintText: "Enter your Name"),
                 CustomTextField(controller: emailController, hintText: "Email address"),
                 CustomTextField(controller: passwordController, hintText: "Password"),
@@ -43,9 +42,9 @@ class _SignUpState extends State<SignUp> {
                   onPressed: (){},
                   text: "Sign Up",
                 ),
-                const Text("or sign up with", style: choiceTextStyle,),
+                Text("or sign up with", style: Theme.of(context).textTheme.bodySmall,),
                 SocialIconLoginRow(
-                  //Todo add firebase signup funcationality.
+                  //Todo add firebase signup functionality.
                   onPressedApple: (){},
                   onPressedFacebook:(){} ,
                   onPressedGoogle: (){},

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluxstore/utils/colors.dart';
 
-import '../utils/styles.dart';
-
 class DefaultButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
@@ -16,7 +14,7 @@ class DefaultButton extends StatelessWidget {
           padding: WidgetStateProperty.all(const EdgeInsets.symmetric(horizontal: 40)),
           backgroundColor: defaultButtonColor,
         ),
-        child: Text(text, style: buttonTextStyle,),
+        child: Text(text, style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white),),
     );
   }
 }

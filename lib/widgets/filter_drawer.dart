@@ -128,18 +128,17 @@ class _FilterDrawerState extends State<FilterDrawer> {
                       width: 200,
                       decoration: BoxDecoration(
                         border: Border.all(),
-                        borderRadius: BorderRadius.all(Radius.circular(20))
+                        borderRadius: const BorderRadius.all(Radius.circular(20))
                       ),
                       child: DropdownButton(
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderRadius: const BorderRadius.all(Radius.circular(10)),
                         value: "croptop",
                           items:const [
-                            DropdownMenuItem(child: Text("Crop Tops"), value: "croptop",),
-                            DropdownMenuItem(child: Text("Shirts"), value: "shirts",),
-                            DropdownMenuItem(child: Text("T shirts"), value: "Tshirt",)
+                            DropdownMenuItem(value: "croptop",child: Text("Crop Tops"),),
+                            DropdownMenuItem(value: "shirts",child: Text("Shirts"),),
+                            DropdownMenuItem(value: "Tshirt",child: Text("T shirts"),)
                           ],
                           onChanged: (v){
-
                           }),
                     )
 

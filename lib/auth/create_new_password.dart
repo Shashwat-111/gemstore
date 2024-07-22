@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluxstore/screens/main_scaffold.dart';
-import 'package:fluxstore/utils/styles.dart';
 import 'package:fluxstore/widgets/custom_text_field.dart';
 import 'package:fluxstore/widgets/default_button.dart';
 
@@ -40,16 +39,16 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
               children: [
                 Text(
                   "Create a new password",
-                  style: headingTextStyle,
+                  style: Theme.of(context).textTheme.headlineLarge,
                   softWrap: true,
                 ),
                 const SizedBox(
                   height: 20,
                 ),
-                const Text(
+                Text(
                   "Your password must me different form the previously used password",
                   softWrap: true,
-                  style: choiceTextStyle,
+                  style: Theme.of(context).textTheme.bodySmall,
                 ),
                 const SizedBox(
                   height: 50,

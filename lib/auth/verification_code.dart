@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fluxstore/auth/create_new_password.dart';
-import 'package:fluxstore/utils/styles.dart';
 import 'package:fluxstore/widgets/default_button.dart';
 
 import '../utils/constants.dart';
@@ -34,12 +33,12 @@ class _VerificationCodeState extends State<VerificationCode> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Verification Code", style: headingTextStyle,),
+              Text("Verification Code", style: Theme.of(context).textTheme.headlineLarge,),
               const SizedBox(height: 20,),
-              const Text("Please send the verification code we send to your email address", softWrap: true,style: choiceTextStyle,),
+              Text("Please send the verification code we send to your email address", softWrap: true,style: Theme.of(context).textTheme.bodySmall,),
               const SizedBox(height: 50,),
               const OtpInputField(),
-              const Text("Resend in 00:10", style: choiceTextStyle,),
+              Text("Resend in 00:10", style: Theme.of(context).textTheme.bodySmall,),
               const SizedBox(height: 50,),
               Align(
                 alignment: Alignment.center,
