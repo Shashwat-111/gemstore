@@ -3,7 +3,7 @@
 ![Flutter Version](https://img.shields.io/badge/flutter-v3.22.2-blue.svg)
 ![Dart Version](https://img.shields.io/badge/dart-v3.4.3-blue.svg)
 
-This project is a UI for a Ecommerce app "Gemstore" built using Flutter. The design has been inspired by this [figma design](https://www.figma.com/design/MjhMQKNVjLj0Y43qjoJbhR/FluxStore-(Community)?node-id=0-1)
+This project is a UI clone of a Ecommerce app "Gemstore" using Flutter. The design has been taken from this [figma design](https://www.figma.com/design/MjhMQKNVjLj0Y43qjoJbhR/FluxStore-(Community)?node-id=0-1)
 
 ## Screenshots
 ### Onboarding Pages
